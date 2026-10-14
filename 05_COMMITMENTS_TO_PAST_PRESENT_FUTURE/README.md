@@ -1,0 +1,6 @@
+# 05 Commitments To Past Present Future
+
+**Project:** SQLITE
+**Upstream:** https://github.com/capacitor-community/sqlite
+
+Content specific to SQLITE in category MOBILE.

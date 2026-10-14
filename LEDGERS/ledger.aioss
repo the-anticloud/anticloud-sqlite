@@ -1,0 +1,9 @@
+# AIOSS ledger v1
+# project: MOBILE/SQLITE
+# records: 5
+# head: 0b912f7bac7e80660d3c69eb577213313853fcf8458905c7b0be15e9bb4ead4c
+{"digest": "f6c0fdea0912f8091cba3f952fcdca13be87e6e10ae1c1aa376c1dc13073464a", "kind": "bench-report", "path": "BENCH.json", "payload_sha3": "7a5d90fcea2624588428ba6942468d2e2fe7be34c8e0e1fd557becc04d31a658", "prev": "5a5a9db5fb708ae61804306200e7a9e31853dde596c5f14d2303d4349fe14b2d", "seq": 0, "ts": "2026-10-09T05:53:36Z"}
+{"digest": "343efed2078e2d58590bd918ad2ff1925f7e38e3c6d016876f6a85666939bc0b", "kind": "result-register", "path": "ISOLATED_LAB_RESULTS/03_Result_Register.md", "payload_sha3": "aa5f6a5248274e2c280af8e4f000843c920ad183e9904e50b3678d6be226c02f", "prev": "f6c0fdea0912f8091cba3f952fcdca13be87e6e10ae1c1aa376c1dc13073464a", "seq": 1, "ts": "2026-10-09T05:53:36Z"}
+{"digest": "4b900b1c31a4fb59c0d7a3e7d8667e51a0f2b2161f0fc5aad405c23852d5ee43", "kind": "readme", "path": "README.md", "payload_sha3": "cf00b715d1d28d065f0976a966c3176df23c7e251e9a4aa58b4968fc879c2b17", "prev": "343efed2078e2d58590bd918ad2ff1925f7e38e3c6d016876f6a85666939bc0b", "seq": 2, "ts": "2026-10-09T05:53:36Z"}
+{"digest": "852b49a5bd6360eda870d1123094088ee7e9e7ea136f933762945fcfcab4deed", "kind": "licence", "path": "ANTICOMMONS_LICENSE.md", "payload_sha3": "46b938b14c4771c38d6e395cf4c4396997492f00dcf6a078e85a4609bb3cc034", "prev": "4b900b1c31a4fb59c0d7a3e7d8667e51a0f2b2161f0fc5aad405c23852d5ee43", "seq": 3, "ts": "2026-10-09T05:53:36Z"}
+{"digest": "0b912f7bac7e80660d3c69eb577213313853fcf8458905c7b0be15e9bb4ead4c", "kind": "notice", "path": "NOTICE", "payload_sha3": "a8e8bceb5c67e7f87670804a1b4c5cc325f0d593de3549c9d10f84b980d341ea", "prev": "852b49a5bd6360eda870d1123094088ee7e9e7ea136f933762945fcfcab4deed", "seq": 4, "ts": "2026-10-09T05:53:36Z"}
