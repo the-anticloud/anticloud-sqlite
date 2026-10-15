@@ -1,89 +1,72 @@
 # SQLITE
 
-> Anticloud offline package — upstream: sqlite/sqlite @ `master`.
+> SQLite Source Repository This repository contains the complete source code for the [SQLite database engine](https://sqlite.org/) going back to 2000-05-29. The tree includes many tests and some documentation, though additional tests and most documentation are managed separately.
 
-## What This Project Does
+**Category:** MOBILE · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/sqlite/sqlite · **Pinned commit:** `90687aa700d1d0a7af8fe95f8a4c841df6fa15ba` · **Vendor:** Anticloud FZ LLE
 
-Official Git mirror of the SQLite source tree
+## What This Project Is
 
-## Upstream README
+SQLite Source Repository This repository contains the complete source code for the [SQLite database engine](https://sqlite.org/) going back to 2000-05-29. The tree includes many tests and some documentation, though additional tests and most documentation are managed separately.
 
-<h1 align="center">SQLite Source Repository</h1>
+This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
-This repository contains the complete source code for the
-[SQLite database engine](https://sqlite.org/) going back
-to 2000-05-29.  The tree includes many tests and some
-documentation, though additional tests and most documentation
-are managed separately.
+## Installation
 
-See the [on-line documentation](https://sqlite.org/) for more information
-about what SQLite is and how it works from a user's perspective.  This
-README file is about the source code that goes into building SQLite,
-not about how SQLite is used.
+```
+# See the upstream README (linked above) for build steps.
+```
 
-## Version Control
+## Usage
 
-SQLite sources are managed using
-[Fossil](https://fossil-scm.org/), a distributed version control system
-that was specifically designed and written to support SQLite development.
-The [Fossil repository](https://sqlite.org/src/timeline) contains the urtext.
+On Windows, everything can be compiled with MSVC.
+You will also need a working installation of TCL if you want to run tests,
+though TCL is not required if you just want to build SQLite itself.
+See the [compile-for-windows.md](doc/compile-for-windows.md) document for
+additional information about how to install MSVC and TCL and configure your
+build environment.
 
-If you are reading this on GitHub or some other Git repository or service,
-then you are looking at a mirror.  The names of check-ins and
-other artifacts in a Git mirror are different from the official
-names for those objects.  The official names for check-ins are
-found in a footer on the check-in comment for authorized mirrors.
-The official check-in name can also be seen in the `manifest.uuid` file
-in the root of the tree.  Always use the official name, not  the
-Git-name, when communicating about an SQLite check-in.
+If you want to run tests, you need to let SQLite know the location of your
+TCL library, using a command like this:
 
-If you pulled your SQLite source code from a secondary source and want to
-verify its integrity, there are hints on how to do that in the
-[Verifying Code Authenticity](#vauth) section below.
+        set TCLDIR=c:\Tcl
 
-## Contacting The SQLite Developers
+SQLite itself does not contain any TCL code, but it does use TCL to run
+tests. You may need to install TCL development libraries in order to
+successfully complete some makefile targets. It is helpful, but is not
+required, to install the SQLite TCL extension (the "tclextension-install"
+target) prior to running tests.
 
-The preferred way to ask questions or make comments about SQLite is to
-visit the [SQLite Forum](https://sqlite.org/forum) at
-<https://sqlite.org/forum/>.  Anonymous postings are permitted. For
-bug reports, please use the [SQLite bugs
-forum](https://sqlite.org/bugs) at <https://sqlite.org/bugs>.
+The source tree contains a "make.bat" file that allows the same "make"
+commands of Unix to work on Windows.  In the following, you can substitute
+"nmake /f Makefile.msc" in place of "make", if you prefer to avoid this BAT
+file:
 
-If you think you have found a bug that has security implications and
-you do not want to report it on the public forum, you can send a private
-email to drh at sqlite dot org.
+        make sqlite3.exe
+        make sqlite3.c
+        make sqldiff.exe
 
-## Public Domain
+## Anticloud Overlay
 
-The SQLite source code is in the public domain.  See
-<https://sqlite.org/copyright.html> for details. 
+The 12 improvements live under `anticloud/`. Run the check suite from this directory:
 
-Because SQLite is in the public domain, we do not normally accept pull
-requests, because if we did take a pull request, the changes in that
-pull request might carry a copyright and the SQLite source code would
-then no longer be fully in the public domain.
+```
+python anticloud/bench/runner.py --cwd anticloud
+```
 
-## Obtaining The SQLite Source Code
+## Benchmark Results
 
-Source code tarballs or ZIP archives are available at:
+The suite is recorded in `BENCH.json`; no benchmark rows were found in this package.
 
-  *  [Latest trunk check-in](https://sqlite.org/src/rchvdwnld/trunk).
+## Licence
 
-  *  [Latest release](https://sqlite.org/src/rchvdwnld/release)
-
-  *  For other check-ins, browse the
-     [project timeline](https://sqlite.org/src/timeline?y=ci) and
-     click on the check-in hash of the check-in you want to download.
-     On the resulting "info" page, click one of the options to the
-     right of the "**Downloads:**" label in the "**Overview**" section
-     near the top.
-
-To access
-
-## License
-
-Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
+The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The Anticloud overlay is licensed under Anticommons 0.1.0 (`ANTICOMMONS_LICENSE.md`).
 
 ## Verification
 
-Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
+SHA3-256 of `BENCH.json`:
+
+```
+97e0d9b65f36b267fe39ebbc194175cf95228088d04187f20a5b674e583d1ba8
+```
+
+Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.

@@ -2,13 +2,11 @@
  "schema": "anticloud.tier-bench/1",
  "project": "SQLITE",
  "source": {
-  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\MOBILE\\SQLITE\\UPSTREAM",
   "git": {
-   "head": "dbbe931904f2ee06546448fbe7cf7780f61bc110",
-   "url": "https://github.com/mattn/go-sqlite3",
-   "branch": "master",
-   "committed_at": "2026-09-29T11:06:59+04:00",
-   "sha_verified_from": "GitHub API commits/master"
+   "url": "https://github.com/sqlite/sqlite",
+   "head": "90687aa700d1d0a7af8fe95f8a4c841df6fa15ba",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/mattn/go-sqlite3"
   }
  },
  "metrics": {
