@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:7776ae5d-ea17-5468-8e5e-b0afc49b22cc",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-09T09:06:22Z",
+    "component": {
+      "type": "application",
+      "name": "SQLITE",
+      "version": "dbbe931904f2",
+      "bom-ref": "pkg:generic/anticloud/SQLITE@dbbe931904f2",
+      "purl": "pkg:generic/anticloud/SQLITE@dbbe931904f2",
+      "licenses": [
+        {
+          "license": {
+            "id": "NOASSERTION"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "dbbe931904f2ee06"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": []
+}
