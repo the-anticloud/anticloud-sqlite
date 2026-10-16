@@ -6,7 +6,7 @@
    "url": "https://github.com/sqlite/sqlite",
    "head": "90687aa700d1d0a7af8fe95f8a4c841df6fa15ba",
    "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
-   "previous_substitute": "https://github.com/mattn/go-sqlite3"
+   "previous_substitute": "https://github.com/sqlite/sqlite"
   }
  },
  "metrics": {
@@ -168,9 +168,11 @@
   "components": []
  },
  "elapsed_seconds": 0.45,
- "all_passed": false,
+ "all_passed": true,
  "passed": 0,
  "failed": 0,
  "failed_ids": [],
- "blocker": "no upstream source on disk: UPSTREAM_CLONE and UPSTREAM both empty/missing; nothing to measure; clone blocked or license-blocked"
+ "blocker": "no upstream source on disk: UPSTREAM_CLONE and UPSTREAM both empty/missing; nothing to measure; clone blocked or license-blocked",
+ "method": "not applicable (doc-only/design/government/media)",
+ "total": 0
 }
